@@ -41,6 +41,7 @@ def webServer(port=13331):
       webContent += b"Content-Type: text/html; charset=UTF-8\r\n"
       webContent += f"Content-Length: {len(htmlFile)}\r\n".encode()
       webContent += b"Connection: close\r\n"
+      webContent += b"Server: Lelouch\r\n"
       webContent += b"\r\n"  # End of headers
 
       #Note that a complete header must end with a blank line, creating the four-byte sequence "\r\n\r\n" Refer to https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/TCPSockets.html
@@ -86,3 +87,4 @@ def webServer(port=13331):
 
 if __name__ == "__main__":
   webServer(13331)
+
