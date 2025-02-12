@@ -71,7 +71,7 @@ def webServer(port=13331):
       webContent = b"HTTP/1.1 404 Not Found\r\n"
       webContent += b"Content-Type: text/html; charset=UTF-8\r\n"
       webContent += b"Connection: close\r\n"
-      webContent += b"Server: Lelouch\r\n"
+      webContent += b"Server: Apache/2.2.3 (Centos)\r\n"
       webContent += b"\r\n"
       webContent += htmlCode.encode()
       webContent404 = webContent
